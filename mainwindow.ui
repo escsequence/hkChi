@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>682</width>
+    <height>564</height>
+   </rect>
+  </property>
+  <property name="acceptDrops">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string>hkChi 1.0</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Select games:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QListWidget" name="listWidgetGames">
+        <item>
+         <property name="text">
+          <string>Test Item 1</string>
+         </property>
+         <property name="checkState">
+          <enum>Checked</enum>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonAddMoreGames">
+        <property name="text">
+         <string>Add more games</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_5">
+      <item>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="title">
+         <string>Game Options</string>
+        </property>
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="geometry">
+          <rect>
+           <x>-10</x>
+           <y>450</y>
+           <width>114</width>
+           <height>32</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>PushButton</string>
+         </property>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>682</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuhkChi">
+    <property name="title">
+     <string>hkChi</string>
+    </property>
+    <addaction name="actionAbout_hkChi"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionAdd_new_game"/>
+   </widget>
+   <widget class="QMenu" name="menuKernel">
+    <property name="title">
+     <string>Kernel</string>
+    </property>
+    <widget class="QMenu" name="menuFlash_kenerel">
+     <property name="title">
+      <string>Flash kenerel</string>
+     </property>
+     <addaction name="actionOriginal"/>
+     <addaction name="actionCustom"/>
+    </widget>
+    <widget class="QMenu" name="menuBoot_from_RAM">
+     <property name="title">
+      <string>Boot from RAM</string>
+     </property>
+     <addaction name="actionOriginal_kernel"/>
+     <addaction name="actionPatched"/>
+    </widget>
+    <addaction name="actionDump_kernel"/>
+    <addaction name="menuFlash_kenerel"/>
+    <addaction name="separator"/>
+    <addaction name="menuBoot_from_RAM"/>
+    <addaction name="separator"/>
+    <addaction name="actionDump_whole_NAND_flash"/>
+    <addaction name="actionDump_decrypted_NAND_B_partition"/>
+    <addaction name="actionDump_NAND_C_partition"/>
+    <addaction name="actionFlash_NAND_C_partition_experts_only"/>
+    <addaction name="separator"/>
+    <addaction name="actionUninstall"/>
+   </widget>
+   <widget class="QMenu" name="menuModules">
+    <property name="title">
+     <string>Modules</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuSettings">
+    <property name="title">
+     <string>Settings</string>
+    </property>
+    <addaction name="actionLanguage"/>
+    <addaction name="actionConsole_type"/>
+    <addaction name="actionPages_folders_structure"/>
+    <addaction name="separator"/>
+    <addaction name="actionController_hacks"/>
+   </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>Tools</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+   </widget>
+   <addaction name="menuhkChi"/>
+   <addaction name="menuFile"/>
+   <addaction name="menuKernel"/>
+   <addaction name="menuModules"/>
+   <addaction name="menuSettings"/>
+   <addaction name="menuTools"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionAbout_hkChi">
+   <property name="text">
+    <string>About hkChi</string>
+   </property>
+  </action>
+  <action name="actionDump_kernel">
+   <property name="text">
+    <string>Dump kernel</string>
+   </property>
+  </action>
+  <action name="actionOriginal">
+   <property name="text">
+    <string>Original</string>
+   </property>
+  </action>
+  <action name="actionCustom">
+   <property name="text">
+    <string>Custom</string>
+   </property>
+  </action>
+  <action name="actionOriginal_kernel">
+   <property name="text">
+    <string>Original</string>
+   </property>
+  </action>
+  <action name="actionPatched">
+   <property name="text">
+    <string>Patched</string>
+   </property>
+  </action>
+  <action name="actionDump_whole_NAND_flash">
+   <property name="text">
+    <string>Dump whole NAND flash</string>
+   </property>
+  </action>
+  <action name="actionDump_decrypted_NAND_B_partition">
+   <property name="text">
+    <string>Dump decrypted NAND-B partition</string>
+   </property>
+  </action>
+  <action name="actionDump_NAND_C_partition">
+   <property name="text">
+    <string>Dump NAND-C partition</string>
+   </property>
+  </action>
+  <action name="actionFlash_NAND_C_partition_experts_only">
+   <property name="text">
+    <string>Flash NAND-C partition (experts only!)</string>
+   </property>
+  </action>
+  <action name="actionUninstall">
+   <property name="text">
+    <string>Uninstall</string>
+   </property>
+  </action>
+  <action name="actionLanguage">
+   <property name="text">
+    <string>Language</string>
+   </property>
+  </action>
+  <action name="actionConsole_type">
+   <property name="text">
+    <string>Console type</string>
+   </property>
+  </action>
+  <action name="actionPages_folders_structure">
+   <property name="text">
+    <string>Pages/folders structure</string>
+   </property>
+  </action>
+  <action name="actionController_hacks">
+   <property name="text">
+    <string>Controller hacks</string>
+   </property>
+  </action>
+  <action name="actionAdd_new_game">
+   <property name="text">
+    <string>Add new game</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
